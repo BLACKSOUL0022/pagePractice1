@@ -1,0 +1,717 @@
+/* General */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    Desktop
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+header {
+  position: relative;
+}
+
+main {
+  position: relative;
+  z-index: 100;
+  height: 2000px;
+  background-color: #24a;
+}
+
+/*******************************************************************************************************
+                    NAVIGATION BAR
+*******************************************************************************************************/
+
+.desktopNav {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  z-index: 200;
+  visibility: visible;
+  display: flex;
+  background: none;
+}
+
+.smartphonesNav {
+  visibility: hidden;
+  position: absolute;
+  z-index: 300;
+}
+
+.smartphonesMenu {
+  /*Button*/
+  visibility: hidden;
+  position: absolute;
+  z-index: 400;
+}
+
+.smartphonesPrimaryNav {
+  /*Menu de barra*/
+  visibility: hidden;
+  position: fixed;
+  z-index: 500;
+}
+
+.logo {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_img {
+  height: 75px;
+  width: 75px;
+}
+
+.nav_options {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.nav_option {
+  height: 100px;
+  width: auto;
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.nav_option a {
+  transition: 0.3s ease;
+  color: #000;
+}
+
+.nav_option a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.social1 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.social1_instagram,
+.social1_whatsapp {
+  height: 40px;
+  width: 40px;
+  transition: 0.3s ease;
+}
+
+.social1_instagram:hover,
+.social1_whatsapp:hover {
+  transform: scale(1.2);
+  fill: #fff;
+}
+
+/*******************************************************************************************************
+                    COVER IMAGE     SECTION 1
+*******************************************************************************************************/
+
+.coverImage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  top: 0;
+}
+
+.coverImage_img1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    Smarthphones
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+@media (max-width: 1080px) {
+  /*General */
+  h2 {
+    font-size: 50px;
+  }
+
+  body {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  /*******************************************************************************************************
+                        NAVIGATION BAR
+    *******************************************************************************************************/
+
+  .desktopNav {
+    visibility: none;
+  }
+
+  .nav_options {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .social1 {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .logo {
+    visibility: hidden;
+    position: absolute;
+    left: 5vw;
+    top: 1vw;
+  }
+
+/* It is all the blue screen with the menu for smartphones */
+  .smartphonesNav {     
+    visibility: visible;
+    position: fixed;
+    z-index: 300;
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    background-color: rgb(8, 21, 61);
+  }
+
+  .smartphonesLogo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .smartphonesLogo_img {
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 5vw;
+  }
+
+  .smartphonesMenu {
+    /* Button */
+    height: 40px;
+    width: 40px;
+    background-color: rgb(8, 21, 61);
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    position: fixed;
+    right: 5vw;
+    top: 20px;
+    visibility: visible;
+    z-index: 400;
+  }
+
+  .smartphonesPrimaryNav {
+    height: 80px;
+    width: 100%;
+    visibility: visible;
+    background-color: rgb(8, 21, 61);
+  }
+
+  .smartphonesMenu_div {
+    height: 40px;
+    width: 40px;
+    position: relative;
+  }
+
+  .homeSVG {
+    height: 30px;
+    width: 30px;
+    fill: #fff;
+    margin-bottom: -1px;
+  }
+
+  .smartphonesMenu_div div {
+    position: absolute;
+  }
+
+  .smartphonesMenu_icon {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*******************************************************************************************************
+                        MOBILE MENU     MOBILE SECTION
+    *******************************************************************************************************/
+
+  .smartphonesNav section {
+    height: 20%;
+    background-color: rgb(8, 21, 61);
+  }
+
+  .smartphonesNav ul {
+    height: 60%;
+    padding-top: 20px;
+    padding-inline: 50px;
+  }
+
+  .smartphonesNav ul li {
+    list-style: none;
+    font-size: 30px;
+    padding-block: 10px;
+    padding-left: 10px;
+    color: #fff;
+    transition: 0.3s ease;
+  }
+
+  .smartphonesNav ul li:hover {
+    transform: scale(1.1);
+    background-color: #02091d;
+    box-shadow: 0px 0px 5px #fff;
+  }
+
+  .smartphonesNav ul li:active {
+    background-color: #fff;
+    
+    & svg {
+        fill: #000;
+    }
+    & svg path {
+        fill: #000;
+    }
+    & a {
+        color: #000;
+    }
+  }
+
+  .morePages {
+    height: 20%;
+    width: 100%;
+    background-color: #02091d;
+    position: relative;
+  }
+
+  .morePages button {
+    height: 60px;
+    width: 60px;
+    background-color: #141414;
+    margin-top: -30px;
+    outline: 10px rgb(8, 21, 61) solid;
+    border: none;
+    border-radius: 50%;
+    margin-inline: calc(50% - 30px);
+    position: relative;
+    z-index: 200;
+  }
+
+  .morePagesClicker {
+    min-height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: none;
+    position: absolute;
+    z-index: 300;
+    top: -29px;
+    left: calc(50% - 30px);
+  }
+
+  .morePagesClicker:active {
+    box-shadow: 0px 0px 20px #fff;
+  }
+
+  .morePages button::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #02091d;
+    border-top-right-radius: 20px;
+    position: absolute;
+    top: 30px;
+    left: -28px;
+    box-shadow: 0px -9.5px 0px rgb(8, 21, 61);
+  }
+
+  .morePages button::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #02091d;
+    border-top-left-radius: 20px;
+    position: absolute;
+    top: 30px;
+    left: 67px;
+    box-shadow: 0px -9.5px 0px rgb(8, 21, 61);
+  }
+
+  .arrowUpSVG1 {
+    height: 30px;
+    width: 30px;
+    fill: #fff;
+    background: none;
+  }
+
+  .morePages h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .morePagesLogos {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    z-index: 200;
+    background-color: rgb(2, 5, 14);
+    position: absolute;
+    top: -29px;
+    left: calc(50% - 30px);
+    opacity: 0;
+    transition: 0.75s ease;
+    transform: scale(1);
+  }
+
+  .morePagesLogos:active {
+    background-color: #24a !important;
+  }
+
+  #morePagesLogo1:hover {
+    transform: scale(1.2) translate(-45px, -70px) !important;
+  }
+
+  #morePagesLogo2:hover {
+    transform: scale(1.2) translate(45px, -70px) !important;
+  }
+
+
+  .morePages img {
+    height: 90%;
+    width: 90%;
+    margin: 5% 5%;
+    transition: 0.75s ease;
+  }
+  /*******************************************************************************************************
+                        COVER IMAGE     SECTION 1
+    *******************************************************************************************************/
+
+  .coverImage {
+    height: 60vw;
+    width: 100vw;
+  }
+
+  .coverImage_img1 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  /*******************************************************************************************************
+                        DESCRIPTION     SECTION 2
+    *******************************************************************************************************/
+
+  .description {
+    width: 100%;
+  }
+
+  .description_texts {
+    width: 100%;
+  }
+
+  .description_texts h2 {
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+  }
+
+  .description_texts p {
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .description button {
+    margin-bottom: 50px;
+    margin-left: 5%;
+  }
+  .description button:hover {
+    box-shadow: 0px 0px 10px #24a;
+  }
+  .description button:active {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  .description button a {
+    font-size: 18px;
+  }
+
+  .description_images {
+    width: 90%;
+    margin-inline: auto;
+    justify-content: center;
+  }
+
+  .description_images_img {
+    /* All repeated */
+    height: 400px;
+    width: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /*******************************************************************************************************
+                        SERVICES     SECTION 3
+    *******************************************************************************************************/
+
+  .services {
+    width: 100%;
+  }
+
+  .services h2 {
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+  }
+
+  .services article {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    box-shadow: 0px 2px 20px #888;
+    }
+
+  .services_img {
+    height: 40vw;
+    width: 100vw;
+    min-height: 200px;
+    min-width: 320px;
+  }
+
+
+  article h3 {
+    width: 80%;
+  }
+
+  article h3 strong {
+    /*Redundante*/
+    font-weight: 600;
+  }
+
+  article p {
+    padding: 10px;
+  }
+
+  /*******************************************************************************************************
+                        BANNER     SECTION 4
+    *******************************************************************************************************/
+
+  .banner1 {
+    height: 15vw;
+    width: 100%;
+    position: relative;
+  }
+
+  .banner1 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(20, 20, 20, 0.2);
+  }
+
+  .banner1 h2,
+  .banner1 p {
+    text-align: center;
+    margin-inline: auto;
+    color: #fff;
+  }
+
+  .banner1 h2 {
+    width: 90%;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .banner1 p {
+    width: 90%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .banner1 button {
+    height: 40px;
+    width: 120px;
+    margin-top: 20px;
+    margin-left: calc(50% - 60px);
+    border: none;
+    background-color: #24a;
+    color: #fff;
+    transition: 0.05s linear;
+  }
+
+  .banner1 button:hover {
+    box-shadow: 0px 0px 5px #24a;
+  }
+
+  .banner1 button:active {
+    box-shadow: none;
+    margin-top: 22px;
+    background-color: #052585;
+  }
+
+  .suggestions {
+    width: 100%;
+  }
+
+  .reviews {
+    width: 100%;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+
+/*******************************************************************************************************
+                    CATALOG     SECTION 5
+*******************************************************************************************************/
+
+.catalog {
+  height: 100vh;
+}
+
+.catalog h2 {
+  width: 95%;
+}
+
+.catalog_content {
+  height: 80vw;
+  max-height: 70%;
+  width: 96%;
+}
+
+.casa {
+  min-width: 5%;
+  width: 20%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 200;
+}
+
+.casa:hover {
+  width: 80%;
+  transform: scale(1.1);
+  z-index: 300;
+}
+
+.casa::after {
+  content: "";
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.casa:hover::after {
+  opacity: 0;
+}
+
+.casa div:first-child {     /* just made it like this bc it was the easiest way to put the content at the bottom*/
+  width: 100%;
+  height: 60%;
+}
+
+.casa div:nth-child(2) {
+  height: 40%;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.casa:hover div:nth-child(2) { /*this shows a blur to make reading easier */
+  backdrop-filter: blur(5px);
+}
+
+.casa h3, .casa p, .casa button {
+  margin-left: 5%;
+  color: #fff;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.casa:hover h3, .casa:hover p, .casa:hover button {
+  opacity: 1;
+}
+
+.casa div h3 {
+  font-size: clamp(10px, 24px, 24px);
+}
+
+.casa div p {
+  padding-left: 0%;
+  line-height: 20px;
+  font-size: 18px;
+  transition: 1s ease;
+  min-width: 200px;
+}
+
+@media (max-width:800px) {
+  
+  .casa div h3 {
+    font-size: 18px;
+  }
+  
+  .casa div p {
+    visibility: hidden;
+  } 
+  .casa button {
+    border-radius: 20px;
+  }
+}
+
+.casa button {
+  font-size: 18px;
+  background: none;
+  border: none;
+  position: absolute;
+  bottom: 10%;
+  transition: 0.3s ease;
+  background-color: #24a;
+  height: 30px;
+  width: 90px;
+  opacity: 0;
+}
+
+
+}
+
+
